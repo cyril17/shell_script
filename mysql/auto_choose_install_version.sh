@@ -72,6 +72,7 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 EOF
 
+#安装成功
 if [ $? -eq 0 ];then
     echo -e '\e[32mRepo modify Successful!\e[0m'
 else
