@@ -45,8 +45,8 @@ function install() {
 
 function optimize() {
     ln -s /usr/local/nginx/sbin/* /usr/local/sbin/ > /dev/null
-    cp    ./nginx.sh /etc/init.d/nginx
-    cp    ./nginx.conf /usr/local/nginx/conf/nginx.conf
+    cp    ./nginx.sh  /etc/init.d/nginx
+    cp    ./nginx.conf  /usr/local/nginx/conf/nginx.conf
     # The number of CPU cores current server,
     # Amend the "worker_processes" field to the value of the processor
     processor=`cat /proc/cpuinfo | grep "processor" | wc -l`

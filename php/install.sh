@@ -1,4 +1,9 @@
 #!/bin/sh
+
+
+#安装依赖
+yum install  php-mcrypt libmcrypt libmcrypt-devel autoconf freetype gd jpegsrc libmcrypt libpng libpng-devel libjpeg libxml2 libxml2-devel zlib curl curl-devel
+
 #下载源代码
 mkdir -p /usr/local/software;cd /usr/local/software
 wget http://hk1.php.net/distributions/php-5.6.37.tar.gz
