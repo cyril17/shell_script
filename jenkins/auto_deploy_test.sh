@@ -10,6 +10,7 @@ war_Dir=/opt/jenkins
 war_Name=springMVC.war
 ###manual_properties###
 
+
 #update server environment
 echo "**********************************  ${log_time} *************************************"
 echo "updating server  environment start"
