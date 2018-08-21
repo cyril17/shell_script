@@ -12,7 +12,6 @@ cp file/zoo0.cfg z0/conf/zoo.cfg
 cp file/zoo1.cfg z1/conf/zoo.cfg
 cp file/zoo2.cfg z2/conf/zoo.cfg
 
-
 mkdir -p /usr/local/zookeeper/z0/data/
 mkdir -p /usr/local/zookeeper/z1/data/
 mkdir -p /usr/local/zookeeper/z2/data/
@@ -20,6 +19,12 @@ mkdir -p /usr/local/zookeeper/z2/data/
 mkdir -p /usr/local/zookeeper/z0/logs/
 mkdir -p /usr/local/zookeeper/z1/logs/
 mkdir -p /usr/local/zookeeper/z2/logs/
+
+mv z0/*  /usr/local/zookeeper/z0/
+mv z1/*  /usr/local/zookeeper/z1/
+mv z2/*  /usr/local/zookeeper/z2/
+
+rm -rf  ./ z0 z1 z2
 
 echo "0" > /usr/local/zookeeper/z0/data/myid
 echo "1" > /usr/local/zookeeper/z1/data/myid
