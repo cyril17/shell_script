@@ -35,7 +35,6 @@ if [ -f fastdfs*module*.gz ]
 then
 echo ""
 else
-#wget http://jaist.dl.sourceforge.net/project/fastdfs/FastDFS%20Nginx%20Module%20Source%20Code/fastdfs-nginx-module_v1.16.tar.gz
 wget https://github.com/happyfish100/fastdfs-nginx-module/archive/V1.20.tar.gz
 fi
 
@@ -43,7 +42,6 @@ if [ -f V5.11*.gz ]
 then
 echo ""
 else
-#wget https://github.com/happyfish100/fastdfs/archive/V5.05.tar.gz
 wget https://github.com/happyfish100/fastdfs/archive/V5.11.tar.gz
 fi
 
@@ -51,7 +49,6 @@ if [ -f nginx-1.12.2*.gz ]
 then
 echo ""
 else
-#wget http://nginx.org/download/nginx-1.8.0.tar.gz
 wget http://nginx.org/download/nginx-1.12.2.tar.gz
 fi
 
@@ -59,7 +56,6 @@ if [ -f pcre*.gz ]
 then
 echo ""
 else
-#wget http://exim.mirror.fr/pcre/pcre-8.36.tar.gz
 wget http://exim.mirror.fr/pcre/pcre-8.38.tar.gz
 
 fi
@@ -68,7 +64,6 @@ if [ -f zlib*.gz ]
 then
 echo ""
 else
-#wget http://zlib.net/zlib-1.2.8.tar.gz
 wget https://iweb.dl.sourceforge.net/project/libpng/zlib/1.2.11/zlib-1.2.11.tar.gz
 fi
 
@@ -113,7 +108,7 @@ cp client.conf.sample client.conf
 
 #详细设置见附件
 #tracker.conf配置中要修改的几个项：
-#bind_addr=172.17.0.2
+#bind_addr=172.16.75.128
 #port=22122
 #http.server_port=8181
 sed -i "s#\(bind_addr\).*#\1=$ip#" tracker.conf
@@ -124,11 +119,11 @@ sed -i "s#\(^http.server_port\).*#\1=8181#" tracker.conf
 
 #storage.conf配置中要修改的几个项：
 #group_name=group1
-#bind_addr=172.17.0.2
+#bind_addr=172.16.75.128
 #port=23000
-#base_path=/usrdata/fastdfs
-#store_path0=/usrdata/fastdfs
-#tracker_server=172.17.0.2:22122
+#base_path=/usr/local/fastdfs
+#store_path0=/usr/local/fastdfs
+#tracker_server=172.16.75.128:22122
 #http.server_port=8888
 sed -i "s#\(bind_addr\).*#\1=$ip#" storage.conf
 sed -i "s#\(base_path\).*#\1=$base_path#" storage.conf
@@ -157,13 +152,16 @@ tar -zxvf V1.20.tar.gz
 #这个是很重要的，不然在nginx编译的时候会报错的，我看网上很多在安装nginx的fastdfs的插件报错，都是这个原因，而不是版本不匹配。
 cd fastdfs-nginx-module-1.20/src/
 sed -i "s#\(CORE_INCS=\"\$CORE_INCS \).*#\1/usr/include/fastdfs /usr/include/fastcommon/\"#" config
+#视情况而定，可能还会出现错误，需要修改，改为如下
+#ngx_module_incs="/usr/include/fastdfs /usr/include/fastcommon/"
+#CORE_INCS="$CORE_INCS /usr/include/fastdfs /usr/include/fastcommon/"
 
 
 #修改配置
 #group_name=group1
-#tracker_server=172.17.0.2:22122
-#store_path0=/usrdata/fastdfs
-#base_path=/usrdata/fastdfs
+#tracker_server=172.16.75.128:22122
+#store_path0=/usr/local/fastdfs
+#base_path=/usr/local/fastdfs
 #url_have_group_name = true
 sed -i "s#\(group_name\).*#\1=group1#" mod_fastdfs.conf
 sed -i "s#\(tracker_server\).*#\1=$ip:$tracker_port#" mod_fastdfs.conf
@@ -220,7 +218,7 @@ make install
 #在server中添加
 #
 #location /group1/M00{
-#    root /usrdata/fastdfs/data;
+#    root /usr/local/fastdfs/data;
 #    ngx_fastdfs_module;
 #}
 
