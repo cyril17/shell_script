@@ -24,7 +24,7 @@ mv z0/*  /usr/local/zookeeper/z0/
 mv z1/*  /usr/local/zookeeper/z1/
 mv z2/*  /usr/local/zookeeper/z2/
 
-rm -rf  ./ z0 z1 z2
+rm -rf  ./z0 ./z1 ./z2
 
 echo "0" > /usr/local/zookeeper/z0/data/myid
 echo "1" > /usr/local/zookeeper/z1/data/myid
