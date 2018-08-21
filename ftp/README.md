@@ -18,10 +18,10 @@ anon_upload_enable=NO
 #禁止匿名用户建立目录
 anon_mkdir_write_enable=NO
 
-# 设定开启目录标语功能
+#设定开启目录标语功能
 dirmessage_enable=YES
 
-# 设定开启日志记录功能
+#设定开启日志记录功能
 xferlog_enable=YES
 
 #设定端口20进行数据连接
