@@ -1,3 +1,5 @@
+此脚本前提为NGINX未安装，如果之前编译安装目录为/usr/local/nginx，则备份配置文件后可以直接运行此脚本
+
 
 nginx1.12.2 编译出现 /usr/include/fastdfs/fdfs_define.h:15:27: fatal error: common_define.h: No such file or directory #31
 
