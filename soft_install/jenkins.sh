@@ -18,8 +18,6 @@ port=8080
 #默认监听所有
 listen=0.0.0.0
 
-
-
 get_jenkins() {
     test_package http://shell-auto-install.oss-cn-zhangjiakou.aliyuncs.com/package/jenkins.war 08386ff41dbf7dd069c750f3484cc140
 }

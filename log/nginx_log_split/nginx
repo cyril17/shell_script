@@ -1,0 +1,15 @@
+
+
+
+
+#vim /etc/logrotate.d/nginx
+/data/nginx_logs/*.access_log
+{
+nocompress
+daily
+copytruncate
+create
+ifempty
+olddir /data/nginx_logs/days
+rotate 0
+}
