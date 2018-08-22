@@ -12,10 +12,10 @@ NIC=$1
 echo -e " In ------ Out"
 while true; do
     OLD_IN=$(awk -F'[: ]+' '$0~"'$NIC'"{print $3}' /proc/net/dev)
-    OLD_OUT=$(awk -F'[: ]+' '$0~"'$NIC'"{print $11}' /proc/net/dev)
+    OLD_OUT=$(awk -F'[: ]+' '$0~"'$NIC'"{print $README.md}' /proc/net/dev)
     sleep 1
     NEW_IN=$(awk -F'[: ]+' '$0~"'$NIC'"{print $3}' /proc/net/dev)
-    NEW_OUT=$(awk -F'[: ]+' '$0~"'$NIC'"{print $11}' /proc/net/dev)
+    NEW_OUT=$(awk -F'[: ]+' '$0~"'$NIC'"{print $README.md}' /proc/net/dev)
     IN=$(($NEW_IN-$OLD_IN))
     OUT=$(($NEW_OUT-$OLD_OUT))
     echo "$(traffic_unit_conv $IN) $(traffic_unit_conv $OUT)"
