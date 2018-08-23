@@ -20,5 +20,5 @@ function echo_color1() {
     esac
 }
 #使用方法：
-echo_color green "test"
+echo_color green "test.yaml"
 echo_color1 red "test1"

@@ -1525,7 +1525,7 @@
         四、登录{
 
             192.168.1.5:28017      # http登录后可查看状态
-            ./mongo                # 默认登录后打开 test 库
+            ./mongo                # 默认登录后打开 test.yaml 库
             ./mongo 192.168.1.5:27017/databaseName      # 直接连接某个库 不存在则创建  启动认证需要指定对应库才可登录
 
         }
@@ -1912,7 +1912,7 @@
         sshfs name@server:/path/to/folder /path/to/mount/point  # 通过ssh挂载远程主机上的文件夹
         fusermount -u /path/to/mount/point                      # 卸载ssh挂载的目录
         ssh user@host cat /path/to/remotefile | diff /path/to/localfile -                # 用DIFF对比远程文件跟本地文件
-        su - user -c "ssh user@192.168.1.1 \"echo -e aa |mail -s test mail@163.com\""    # 切换用户登录远程发送邮件
+        su - user -c "ssh user@192.168.1.1 \"echo -e aa |mail -s test.yaml mail@163.com\""    # 切换用户登录远程发送邮件
 
         SSH反向连接{
 

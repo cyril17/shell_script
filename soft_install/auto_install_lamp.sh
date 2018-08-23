@@ -7,8 +7,8 @@ H_URL='http://mirror.bit.edu.cn/apache/httpd/'
 H_PREFIX='/usr/local/apache'
 ###########################################################################################
 #Mysql define path variable
-M_FILES='mysql-test-5.7.22-el7-x86_64.tar.gz'
-M_FILES_DIR='mysql-test-5.7.22-el7-x86_64'
+M_FILES='mysql-test.yaml-5.7.22-el7-x86_64.tar.gz'
+M_FILES_DIR='mysql-test.yaml-5.7.22-el7-x86_64'
 M_URL='https://dev.mysql.com/get/Downloads/MySQL-5.7/'
 M_PREFIX='/usr/local/mysql'
 ###########################################################################################

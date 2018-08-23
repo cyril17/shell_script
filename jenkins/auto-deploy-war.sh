@@ -32,8 +32,8 @@ if [ -n "${TOMCAT_PID}" ]; then
 	echo "成功关闭Tomcat."
 fi
 
-warPath="${TOMCAT_HOME}/webapps/test-expro-api/"
-warFile="${TOMCAT_HOME}/webapps/test-api.war"
+warPath="${TOMCAT_HOME}/webapps/test.yaml-expro-api/"
+warFile="${TOMCAT_HOME}/webapps/test.yaml-api.war"
 
 deleteWhenExist ${warPath}
 deleteWhenExist ${warFile}
