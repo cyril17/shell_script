@@ -1,18 +1,12 @@
 start or stop tomcat process
 
-<<<<<<< HEAD
-下载tomcat地址
-wget   http://mirrors.shuosc.org/apache/tomcat/tomcat-8/v8.0.47/bin/apache-tomcat-8.0.47.tar.gz
-=======
-
-
 下载tomcat地址
 wget   http://mirrors.shuosc.org/apache/tomcat/tomcat-8/v8.0.47/bin/apache-tomcat-8.0.47.tar.gz
 
-
->>>>>>> 1adf205e8481084e0e70e59a916b53d8c38150bc
 或者
 wget -c http://mirrors.shu.edu.cn/apache/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.tar.gz
+
+http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.33/bin/apache-tomcat-8.5.33.tar.gz
 
 
 
