@@ -120,10 +120,7 @@ anon_other_write_enable=YES
 local_umask=022
 EOF
 
-mkdir "$virtual_user_home"/"$1"
-echo "$1" >> /etc/vsftpd/chroot_list
-chown $guest_username "$virtual_user_home"/"$1"
-
+2
 echo "==========$users============"
 cat $users
 }

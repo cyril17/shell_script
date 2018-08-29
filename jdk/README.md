@@ -4,6 +4,10 @@
 即
 wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz
 或者
+wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u151-b12/jdk-8u151-linux-x64.tar.gz
+或者
+
+
 ftp://39.104.166.198/jdk-8u172-linux-x64.tar.gz
 ftp://39.104.166.198/jdk-7u80-linux-x64.tar.gz
 或者
