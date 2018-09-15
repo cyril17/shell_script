@@ -7,7 +7,6 @@ deleteWhenExist(){
  fi
 }
 
-
 #Tomcat根目录
 TOMCAT_HOME="/opt/jenkins/test1"
 #端口
